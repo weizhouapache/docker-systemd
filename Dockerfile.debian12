@@ -1,0 +1,9 @@
+FROM debian:12
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y ssh systemd
+
+RUN echo exit 0 > /usr/sbin/policy-rc.d
+
+CMD ["/sbin/init"] 

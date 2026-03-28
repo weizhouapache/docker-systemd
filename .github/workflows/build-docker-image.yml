@@ -82,3 +82,8 @@ jobs:
       - name: Push Docker image to Docker Registry
         run: docker push ${FULL_TAG}-rocky9
 
+      - name: Build the Docker image for docker-systemd
+        run: docker build . --file Dockerfile.oracle10 --tag ${FULL_TAG}-oracle10
+      - name: Push Docker image to Docker Registry
+        run: docker push ${FULL_TAG}-oracle10
+

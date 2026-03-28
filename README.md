@@ -22,9 +22,12 @@ If you use a non-root user, please add `sudo` before the commands.
 ```
 docker build . --file Dockerfile.ubuntu24 --tag weizhouapache/docker-systemd:latest-ubuntu24
 docker build . --file Dockerfile.debian12 --tag weizhouapache/docker-systemd:latest-debian12
+
 docker build . --file Dockerfile.alma9 --tag weizhouapache/docker-systemd:latest-alma9
 docker build . --file Dockerfile.oracle9 --tag weizhouapache/docker-systemd:latest-oracle9
 docker build . --file Dockerfile.rocky9 --tag weizhouapache/docker-systemd:latest-rocky9
+
+docker build . --file Dockerfile.oracle10 --tag weizhouapache/docker-systemd:latest-oracle10
 ```
 
 You can find the docker images ready for use on:

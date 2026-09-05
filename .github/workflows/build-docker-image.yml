@@ -63,6 +63,11 @@ jobs:
         run: docker push ${FULL_TAG}-ubuntu24
 
       - name: Build the Docker image for docker-systemd
+        run: docker build . --file Dockerfile.ubuntu26 --tag ${FULL_TAG}-ubuntu26
+      - name: Push Docker image to Docker Registry
+        run: docker push ${FULL_TAG}-ubuntu26
+
+      - name: Build the Docker image for docker-systemd
         run: docker build . --file Dockerfile.debian12 --tag ${FULL_TAG}-debian12
       - name: Push Docker image to Docker Registry
         run: docker push ${FULL_TAG}-debian12
